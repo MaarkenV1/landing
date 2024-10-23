@@ -1,0 +1,169 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+    color: #333;
+    line-height: 1.7;
+}
+header {
+    background-color: #add8e6;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+    font-size: 1.8em;
+}
+header h1 {
+    margin: 0;
+}
+
+/* Dynamic banner with interactive scroll effect */
+.banner {
+    width: 100%;
+    height: 300px;
+    margin: 20px 0;
+    position: relative;
+    overflow: hidden;
+}
+.banner img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease-in-out;
+}
+.banner:hover img {
+    transform: scale(1.1);
+}
+
+.container {
+    width: 80%;
+    margin: 40px auto;
+    padding: 30px;
+    text-align: center;
+}
+
+/* Profile photo in circle */
+.profile-photo {
+    border-radius: 50%;
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    margin-bottom: 20px;
+}
+
+/* Section styling */
+.section {
+    background-color: #ffffff;
+    padding: 30px;
+    margin-bottom: 30px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 1.4em;
+}
+
+/* Grid layout for larger images with captions */
+.gallery-grid .card-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 20px;
+}
+
+.card {
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+    z-index: 0;
+}
+.card img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+}
+.caption {
+    padding: 10px;
+    background-color: #f9f9f9;
+    font-size: 1.2em;
+}
+.card:hover {
+    transform: scale(1.1);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    z-index: 10;
+}
+
+/* Stretch the last card to fill the remaining space */
+.last-card {
+    grid-column: span 2;
+}
+
+/* Reduced form size */
+.collab-form {
+    width: 60%;
+    margin: 0 auto;
+}
+.collab-form input[type="text"], 
+.collab-form input[type="email"] {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+.collab-form input[type="submit"] {
+    background-color: #3498db;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.collab-form input[type="submit"]:hover {
+    background-color: #2980b9;
+}
+
+/* Social media section */
+.socials {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+.socials li {
+    display: inline-block;
+}
+.socials img {
+    width: 55px;
+    transition: filter 0.3s ease;
+    filter: grayscale(100%);
+}
+.socials img:hover {
+    filter: none;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        width: 95%;
+    }
+    .gallery-grid .card-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 1.4em;
+    }
+    .section h2 {
+        font-size: 1.3em;
+    }
+}
